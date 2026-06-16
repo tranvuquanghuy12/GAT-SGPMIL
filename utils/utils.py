@@ -80,7 +80,7 @@ def get_split_loader(split_dataset, training = False, testing = False, weighted 
 	"""
 		return either the validation loader or training loader 
 	"""
-	kwargs = {'num_workers': 16} if device.type == "cuda" else {}
+	kwargs = {'num_workers': 0} if device.type == "cuda" else {}
 	if use_h5:
 		split_dataset.load_from_h5(True)
 		collate_fn = collate_MIL_h5
