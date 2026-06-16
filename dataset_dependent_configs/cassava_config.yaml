@@ -1,0 +1,23 @@
+data:
+  csv_path: /home/namvh2/TLU_TVQH/SGP_Citrus/Paper_3_SGP-Citrus/Dataset/Public/labels_cassava.csv
+  data_root_dir: /home/namvh2/TLU_TVQH/SGP_Citrus/Paper_3_SGP-Citrus/Dataset/Public/Cassava_Features
+  split_dir: /home/namvh2/TLU_TVQH/SGP_Citrus/Paper_3_SGP-Citrus/Dataset/Public/Cassava_splits
+  feature_extractor: ResNet50
+  print_info: True
+  label_dict: {
+    '0': 0,
+    '1': 1,
+    '2': 2,
+    '3': 3,
+    '4': 4
+  }
+  patient_strat: False
+  num_classes: 5
+  type: multiclass
+  shape_file: null
+  use_h5: False
+
+logging:
+  feature_extractor: ResNet50
+  group: cassava_benchmark
+  model_ckpt_dir: ./experiments_cassava

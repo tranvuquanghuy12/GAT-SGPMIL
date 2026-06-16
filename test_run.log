@@ -1,0 +1,64 @@
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/opt/anaconda3/envs/sgpmil/lib/python3.10/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:881: Checkpoint directory /home/namvh2/TLU_TVQH/SGP_Citrus/Paper_3_SGP-Citrus/SGPMIL/Lich_su_train/plantvillage/abmil/fold_0 exists and is not empty.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+==================================================
+🚀 Training ABMIL | Fold 0
+==================================================
+
+Init loaders.... label column: label
+label dictionary: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4}
+number of classes: 5
+slide-level counts:  
+ label
+0    300
+1    300
+2    300
+3    300
+4    300
+Name: count, dtype: int64
+Patient-LVL; Number of samples registered in class 0: 300
+Slide-LVL; Number of samples registered in class 0: 300
+Patient-LVL; Number of samples registered in class 1: 300
+Slide-LVL; Number of samples registered in class 1: 300
+Patient-LVL; Number of samples registered in class 2: 300
+Slide-LVL; Number of samples registered in class 2: 300
+Patient-LVL; Number of samples registered in class 3: 300
+Slide-LVL; Number of samples registered in class 3: 300
+Patient-LVL; Number of samples registered in class 4: 300
+Slide-LVL; Number of samples registered in class 4: 300
+Done
+┏━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃    ┃ Name                  ┃ Type                       ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0  │ model                 │ ABMIL                      │  1.2 M │ train │     0 │
+│ 1  │ train_accuracy        │ MulticlassAccuracy         │      0 │ train │     0 │
+│ 2  │ train_ece             │ MulticlassCalibrationError │      0 │ train │     0 │
+│ 3  │ val_accuracy          │ MulticlassAccuracy         │      0 │ train │     0 │
+│ 4  │ val_auc               │ MulticlassAUROC            │      0 │ train │     0 │
+│ 5  │ val_cohenkappa        │ MulticlassCohenKappa       │      0 │ train │     0 │
+│ 6  │ val_ece               │ MulticlassCalibrationError │      0 │ train │     0 │
+│ 7  │ test_accuracy         │ MulticlassAccuracy         │      0 │ train │     0 │
+│ 8  │ test_auc              │ MulticlassAUROC            │      0 │ train │     0 │
+│ 9  │ test_cohenkappa       │ MulticlassCohenKappa       │      0 │ train │     0 │
+│ 10 │ test_confusion_matrix │ MulticlassConfusionMatrix  │      0 │ train │     0 │
+│ 11 │ test_ece              │ MulticlassCalibrationError │      0 │ train │     0 │
+└────┴───────────────────────┴────────────────────────────┴────────┴───────┴───────┘
+Trainable params: 1.2 M                                                                                                      
+Non-trainable params: 0                                                                                                      
+Total params: 1.2 M                                                                                                          
+Total estimated model params size (MB): 4.732                                                                                
+Modules in train mode: 26                                                                                                    
+Modules in eval mode: 0                                                                                                      
+Total FLOPs: 0                                                                                                               
+/opt/anaconda3/envs/sgpmil/lib/python3.10/site-packages/sklearn/metrics/_classification.py:534: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+/opt/anaconda3/envs/sgpmil/lib/python3.10/site-packages/torchmetrics/utilities/prints.py:43: UserWarning: No negative samples in targets, false positive value should be meaningless. Returning zero tensor in false positive score
+  warnings.warn(*args, **kwargs)
+/opt/anaconda3/envs/sgpmil/lib/python3.10/site-packages/torchmetrics/utilities/prints.py:43: UserWarning: No positive samples in targets, true positive value should be meaningless. Returning zero tensor in true positive score
+  warnings.warn(*args, **kwargs)
+
+Detected KeyboardInterrupt, attempting graceful shutdown ...
+Epoch 0/19 ━━━━━━━━━━━━╸                            332/1050 0:00:04 • 0:00:09 84.21it/s v_num: 3.000
